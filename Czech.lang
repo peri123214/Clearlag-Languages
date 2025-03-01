@@ -16,7 +16,7 @@ command.admin.name()=admin
 command.admin.desc()=(Control Clearlag's modules)
 command.admin.usage()=
 command.admin.enabledModules({moduleList})=&aPovolené aktualizovatelné moduly: &7{moduleList}
-command.admin.noReloadableFields({module})={module} &cdoes not contain any reloadable fields!
+command.admin.noReloadableFields({module})={module} &cneobsahuje žádné obnovitelné hodnoty!
 command.admin.notEnabled({module})=&cTento modul není zapnut!
 command.admin.reload({module})=&aModul {module} byl aktualizován!
 command.admin.failedReload({module})=&cChyba při aktualizaci {module}
@@ -27,67 +27,67 @@ command.admin.startableModules({modules})=&aZapnutelné moduly: &7{modules}
 command.admin.alreadyEnabled({module})=&cTento modul je již zapnutý!
 command.admin.enabled({module})=&aModul {module} byl zapnut!
 command.admin.moduleStatus({listeners},{commands},{tasks},{modules})={
-&3=--------------[&6-&3] &b&lModule Status &3[&6-&3]----------------=
-              &8[&7Gray = Disabled&8]   &8[&aGreen = Enabled&8]
-&6Listeners: {commands}
-&6Commands: {commands}
-&6Tasks: {tasks}
-&6Modules: {modules}
+&3=--------------[&6-&3] &b&lStav modulů &3[&6-&3]----------------=
+              &8[&7Šedá = Deaktivováno&8]   &8[&aZelená = Aktivováno&8]
+&6Detektory: {commands}
+&6Příkazy: {commands}
+&6Úlohy: {tasks}
+&6Moduly: {modules}
 }
 command.admin.help()={
 &3=-------------[&6-&3] &b&lPříkazy modulů &3[&6-&3]---------------=
-&4  - &3/lagg admin &creload &b<module>
-&4  - &3/lagg admin &cstop &b<module>
-&4  - &3/lagg admin &cstart &b<module>
+&4  - &3/lagg admin &creload &b<modul>
+&4  - &3/lagg admin &cstop &b<modul>
+&4  - &3/lagg admin &cstart &b<modul>
 &4  - &3/lagg admin &clist
 &3-----------------------------------------------------
 }
 
 ##]-> /lagg area
-command.area.name()=areál
-command.area.usage()=<dálka>
-command.area.desc()=(Smaže entity od vašý dálky)
+command.area.name()=oblast
+command.area.usage()=<vzdálenost>
+command.area.desc()=(Smaže entity v zadané vzdálenosti od vás)
 command.area.error({arg})=&4Špatné použití, specifikuj&8: &c{arg}
-command.area.message({removed},{radius})=&6[&aClearLag&6] &3{removed} &bEntity byly smazány v dálce &3{radius}&b!
+command.area.message({removed},{radius})=&6[&aClearLag&6] &3{removed} &bEntity byly smazány ve vzdálenosti &3{radius}&b!
 
 ##]-> /lagg checkchunk
 command.checkchunk.name()=checkchunk
 command.checkchunk.usage()=
-command.checkchunk.desc()=(Displays chunk's entities)
-command.checkchunk.header()=&4*&3&m                            &8(&a&lChunk Info&8)&3&m                              &4*
-command.checkchunk.tilelist()=&3 Tile Entities&8:
-command.checkchunk.entitylist()=&3 Entities&8:
+command.checkchunk.desc()=(Zobrazuje entity v chunku)
+command.checkchunk.header()=&4*&3&m                            &8(&a&lInformace o chunku&8)&3&m                              &4*
+command.checkchunk.tilelist()=&3 Blok. entity&8:
+command.checkchunk.entitylist()=&3 Entity&8:
 command.checkchunk.line({count},{type})=   &8- &ax{count} &7{type}
 command.checkchunk.footer()=&4*&3&m                                                                             &4*
 
 ##]-> /lagg check
 command.check.name()=check
 command.check.usage()=[world1, world2...]
-command.check.desc()=(Counts entities in your world(s))
-command.check.invalidworld({arg})=&4Invalid world specified&8: {arg}
-command.check.header()=&4*&3&m                          &8(&a&lServer Status&8)&3&m                           &4*
+command.check.desc()=(Spočítá entity ve vašem světě / vašich světech)
+command.check.invalidworld({arg})=&4Specifikován neplatný svět&8: {arg}
+command.check.header()=&4*&3&m                          &8(&a&lStav serveru&8)&3&m                           &4*
 command.check.printed({removed1},{mobs},{animals},{players},{chunks},{activehoppers},{inactivehoppers},{spawners},{uptime},{tps},{usedmemory},{maxmemory},{freememory})={
-&3   Items on the ground: &b{removed1}
-&3   Mobs alive: &b{mobs}
-&3   Friendly-Mobs alive: &b{animals}
-&3   Players alive: &b{players}
-&3   Chunks loaded: &b{chunks}
-&3   Active hoppers: &b{activehoppers}
-&3   Idle hoppers: &b{inactivehoppers}
-&3   Active mob spawners: &b{spawners}
-&3   Uptime: &b{uptime}
-&3   Current TPS: &b{tps}
-&3   RAM Usage: &b{usedmemory}&7/&b{maxmemory} &7MB
-&3   Free Memory: &b{freememory} &7MB
+&3   Itemy na zemi: &b{removed1}
+&3   Živí mobové: &b{mobs}
+&3   Živí přátelští mobové: &b{animals}
+&3   Živí hráči: &b{players}
+&3   Načtené chunky: &b{chunks}
+&3   Aktivní hoppery: &b{activehoppers}
+&3   Neaktivní hoppery: &b{inactivehoppers}
+&3   Aktivní spawnery mobů: &b{spawners}
+&3   Doba od spuštění: &b{uptime}
+&3   Aktuální TPS: &b{tps}
+&3   Využití RAM: &b{usedmemory}&7/&b{maxmemory} &7MB
+&3   Nevyužitá paměť: &b{freememory} &7MB
 }
 command.check.footer()=&4*&3&m                                                                             &4*
 
 ##]-> /lagg chunk
 command.chunk.name()=chunk
 command.chunk.usage()=[list-size]
-command.chunk.desc()=(Finds laggy chunks)
-command.chunk.header()=&7&m                           &7( &bLargest Chunks &7)&m                           "
-command.chunk.print({order},{world},{x},{z},{count})=&4{order}&7) &3World: &b{world}  &3x: &b{x}  &3z: &b{z}  &3Entities: &b{count}
+command.chunk.desc()=(Hledá náročné chunky)
+command.chunk.header()=&7&m                           &7( &bNejvětší Chunky &7)&m                           "
+command.chunk.print({order},{world},{x},{z},{count})=&4{order}&7) &3Svět: &b{world}  &3x: &b{x}  &3z: &b{z}  &3Entity: &b{count}
 
 ##]-> /lagg clear
 command.clear.name()=clear
@@ -98,112 +98,112 @@ command.clear.message({count})=&6[&aClearLag&6] &a&bSmazal jste &3{count}&b enti
 ##]-> /lagg gc
 command.gc.name()=gc
 command.gc.usage()=
-command.gc.desc()=(Request garbage collecter)
-command.gc.message()=&6[&aClearLag&6] &a&bRequesting immediate garbage collection! &7(Warning: Java's VM will automatically efficiently free memory. Only use this command to debug or to force clear a large heap)
+command.gc.desc()=(Vyžádá garbage collector)
+command.gc.message()=&6[&aClearLag&6] &a&bZažádáno o okamžitý garbage collection! &7(Varování: VM Javy automaticky a účinně uvolňuje pameť. Používejte tento příkaz pouze pokuď chcete ladit nebo vynutit výmaz velké haldy z RAM!)
 
 ##]-> /lagg halt
 command.halt.name()=halt
 command.halt.usage()=[on/off]
-command.halt.desc()=(Halts most server activity)
-command.halt.halted()=&6[&aClearLag&6] &a&bServer je &cUzdravován&b!
+command.halt.desc()=(Zastaví většinu aktivity serveru)
+command.halt.halted()=&6[&aClearLag&6] &a&bServer je &cuzdravován&b!
 command.halt.unhalted()=&6[&aClearLag&6] &a&aServer již není uzdravován!
 
 ##]-> /lagg killmobs
 command.killmobs.name()=killmobs
 command.killmobs.usage()=
 command.killmobs.desc()=(Smaže moby z vašeho světa)
-command.killmobs.message({count})=&6[&aClearLag&6] &a&3{count} &bMobové byly smazání!
+command.killmobs.message({count})=&6[&aClearLag&6] &a&3{count} &bMobové byly smazáni!
 
 ##]-> /lagg profile
 command.profile.name()=profil
 command.profile.usage()=<sample-seconds> <sample-type>
-command.profile.desc()=(Profile lag inducing events)
-command.profile.invalidtime({arg})=&4Invalid sample time specified&8: &c{arg}
+command.profile.desc()=(Profiluje lag včetně událostí)
+command.profile.invalidtime({arg})=&4Specifikován neplatný čas pro detekci&8: &c{arg}
 command.profile.invalidprofiler({arg},{profilers})={
-&4Invalid Profiler Specified&8: &c{arg}
-&cValid Profilers&8: &7{profilers}
+&4Specifikován neplatný profilovač&8: &c{arg}
+&cValid Profilovače&8: &7{profilers}
 }
-command.profile.nosamples()=&cNo samples logged during sample time
-command.profile.header()=&7&m                           &7( &bChunk Samples &7)&m
-command.profile.line({listing},{world},{x},{z},{samples})=&4{listing}&7) &3World: &b{world}&7, &3x: &b{x}&7, &3z: &b{z}   &3Sample Size: &b{samples}
-command.profile.started({time})=&6[&aClearLag&6] &aProfiler started, running for &7{time} &aseconds
+command.profile.nosamples()=&cŽádné vzorky nebyly zaznamenány v čase pro detekci
+command.profile.header()=&7&m                           &7( &bVzorky chunků &7)&m
+command.profile.line({listing},{world},{x},{z},{samples})=&4{listing}&7) &3Svět: &b{world}&7, &3x: &b{x}&7, &3z: &b{z}   &3Velikost vzorku: &b{samples}
+command.profile.started({time})=&6[&aClearLag&6] &aProfilovač spuštěn, poběží &7{time} &asekund
 
 ##]-> /lagg reload
 command.reload.name()=reload
 command.reload.usage()=
-command.reload.desc()=(Reloads clearlag)
-command.reload.begin()=&6[&aClearLag&6] &bAttempting to reload modules...
-command.reload.successful()=&6[&aClearLag&6] &bModules have been reloaded!
+command.reload.desc()=(Znovu načte clearlag)
+command.reload.begin()=&6[&aClearLag&6] &bPokouším se obnovit moduly...
+command.reload.successful()=&6[&aClearLag&6] &bModuly byly obnoveny!
 
 ##]-> /lagg samplememory
 command.samplememory.name()=samplememory
 command.samplememory.usage()=<sample-seconds>
 command.samplememory.desc()=(Sample memory/GC usage)
-command.samplememory.invalidinteger({arg})=&4Invalid integer specified&8: &c{arg}
-command.samplememory.begin({time})=&aRunning memory sampler for &7{time} &aseconds
-command.samplememory.header()=&4*&3&m                       &8(&a&lMemory Tick Stats&8)&3&m                        &4*
+command.samplememory.invalidinteger({arg})=&4Specifikováno neplatné čislo&8: &c{arg}
+command.samplememory.begin({time})=&aVzorkovač paměti spuštěn na &7{time} &asekund
+command.samplememory.header()=&4*&3&m                       &8(&a&lStatistiky paměti&8)&3&m                        &4*
 command.samplememory.memory({high},{average})={
-&aMemory (In MB):
-&3   Highest Memory Usage Per-tick: &b{high}
-&3   Average Memory Usage Per-tick: &b{average}
+&aPaměť (v MB):
+&3   Nejvyšší využití paměti na tick: &b{high}
+&3   Průměrné využití paměti na tick: &b{average}
 }
 command.samplememory.gc({total},{highest},{lowest},{averagetime},{averageticks})={
 &aGarbage Collector (Based on ticks, in Milliseconds):
-&3   Total GC collections (By Tick): &b{total}
-&3   Highest Garbage Collector time: &b{highest}
-&3   Lowest Garbage Collector time: &b{lowest}
-&3   Average Garbage Collector time: &b{averagetime}
-&3   Average Ticks Between Collections: &b{averageticks}
+&3   Počet GC sběrů (za tick): &b{total}
+&3   Nejvyšší čas garbage collectoru: &b{highest}
+&3   Nejnižší čas garbage collectoru: &b{lowest}
+&3   Průměrný čas garbage collectoru: &b{averagetime}
+&3   Průměrný počet ticků mezi sběry: &b{averageticks}
 }
-command.samplememory.notenoughtime()=&cNot a long enough sample-time for garbage collector results
+command.samplememory.notenoughtime()=&cNedostatečný čas pro výsledky garbage collectoru
 
 ##]-> /lagg sampleticks
 command.sampleticks.name()=sampleticks
 command.sampleticks.usage()=[ticksToSample] [raw/stats]
-command.sampleticks.desc()=(Sample your server's ticks)
-command.sampleticks.start({threadname},{time})=&aStarted full-tick sampling on thread &7{threadname} &afor &7{time} &aticks &7(Estimation, not 100% exact)
-command.sampleticks.rawheader()=&cRaw tick-timings: &7(Normal tick is between 0-50ms in time)
+command.sampleticks.desc()=(Ovzorkuje ticky vašeho serveru)
+command.sampleticks.start({threadname},{time})=&aSpuštěno vzorkování s plným počtem ticků na vlákně &7{threadname} &apo &7{time} &aticků &7(Odhad, ne 100% přesný)
+command.sampleticks.rawheader()=&cHrubé délky ticků: &7(Běžný tick trvá 0-50ms)
 command.sampleticks.rawprint({time})=&8 - {time}
 command.sampleticks.print({large},{small},{average},{spikes})={
-&aTick-Stats: &7(Normal tick is between 0-50ms in time)
-&3   Largest-tick: {large}
-&3   Smallest-tick: {small}
-&3   Average-tick: {average}
-&3   Spikes: {spikes}
+&aStatistiky ticků: &7(Běžný tick trvá 0-50ms)
+&3   Nejvyšší tick: {large}
+&3   Nejnižší tick: {small}
+&3   Průměrný tick: {average}
+&3   Lagy: {spikes}
 }
 
 ##]-> /lagg tpchunk
 command.tpchunk.name()=tpchunk
-command.tpchunk.usage()=<x> <z> [world]
-command.tpchunk.desc()=(Teleport to chunks)
-command.tpchunk.begin()=&6[&aClearLag&6] &bAttempting to reload modules...
-command.tpchunk.successful()=&6[&aClearLag&6] &bModules have been reloaded!
-command.tpchunk.invalidinteger({arg})=&4Invalid integer specified&8: &c{arg}
-command.tpchunk.invalidworld({arg})=&4World does not exist&8: &c{arg}
-command.tpchunk.teleported({x},{z})=&6[&aClearLag&6] &bTeleported to chunk: &3{x}&7, &3{z}
+command.tpchunk.usage()=<x> <z> [svět]
+command.tpchunk.desc()=(Teleportuje na chunk)
+command.tpchunk.begin()=&6[&aClearLag&6] &bPokus o obnovení modulů...
+command.tpchunk.successful()=&6[&aClearLag&6] &bModuly byly obnoveny!
+command.tpchunk.invalidinteger({arg})=&4Zadáno neplatné číslo&8: &c{arg}
+command.tpchunk.invalidworld({arg})=&4Svět neexistuje&8: &c{arg}
+command.tpchunk.teleported({x},{z})=&6[&aClearLag&6] &bByl jste teleportován na chunk: &3{x}&7, &3{z}
 
 ##]-> /lagg tps
 command.tps.name()=tps
 command.tps.usage()=
-command.tps.desc()=(Displays server's average tick rate)
+command.tps.desc()=(Zobrazí průměrný počet ticků serveru za sekundu)
 command.tps.print({tps})=&6[&aClearLag&6] &a{tps}
 
 ##]-> /lagg unloadchunks
 command.unloadchunks.name()=unloadchunks
 command.unloadchunks.usage()=
-command.unloadchunks.desc()=(Unloads unused chunks)
-command.unloadchunks.print({chunks})=&6[&aClearLag&6] &3{chunks} &bchunks have been unloaded!
+command.unloadchunks.desc()=(Odnačte nepoužité chunky)
+command.unloadchunks.print({chunks})=&6[&aClearLag&6] &3{chunks} &bchunky byly odnačteny!
 
 ##]-> /lagg memory
 command.memory.name()=memory
-command.memory.usage()=[tick-rate]
-command.memory.desc()=(View Heap info)
-command.memory.message()=&3Started JVM heap sampling on the listed memory pools
-command.memory.invalidinteger({arg})=&4Invalid poll-rate specified&8: &c{arg}
+command.memory.usage()=[rychlost ticků]
+command.memory.desc()=(Zobrazí informace o heap paměti)
+command.memory.message()=&3Spuštěno vzorkování heap paměti JVM v uvedených memory poolech
+command.memory.invalidinteger({arg})=&4Zadána neplatná rychlost ticků&8: &c{arg}
 
 ##]-> /lagg performance
 command.performance.name()=performance
-command.performance.usage()=[tick-rate]
-command.performance.desc()=(View Server Performance)
-command.performance.message()=&3Started thread sampling (More &1sleep&3 is better!)
-command.performance.invalidinteger({arg})=&4Invalid poll-rate specified&8: &c{arg}
+command.performance.usage()=[rychlost ticků]
+command.performance.desc()=(Zobrazí výkon serveru)
+command.performance.message()=&3Spuštěno vzorkování vláken (více &1pauz&3 je lepší!)
+command.performance.invalidinteger({arg})=&4Zadána neplatná rychlost ticků&8: &c{arg}
